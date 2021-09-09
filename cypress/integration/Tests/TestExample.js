@@ -1,6 +1,6 @@
 describe("ExampleTestSuite", () => {
 it("testOne", () => {
-cy.visit("https://builder.closestaging.nl/")
+cy.visit("https://saucedemo.com/")
 })  
 //it("testTwo", () =>{
 //

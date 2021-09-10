@@ -16,5 +16,11 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+Cypress.Commands.add('loginSauce', (user, password) => {
+    cy.get('#user-name').type(user)
+    cy.get('#password').type(password)
+    cy.get('#login-button').click()
+})
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

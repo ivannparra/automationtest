@@ -47,8 +47,3 @@ it("Test", () => {
     cy.get('.cart_list .removed_cart_item').should('have.lengthOf',1)  //confirm one item was deleted  
 })
 
-it("Test", () => {
-    cy.on('window:alert', (str) => {
-       expect(str).to.equal('Hello , share this practice page and share your knowledge')
-    }) 
-})

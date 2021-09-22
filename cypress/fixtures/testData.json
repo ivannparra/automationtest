@@ -1,0 +1,6 @@
+{
+  "name": "Ivan",
+  "email": "ivan@cypress.io",
+  "body": "test data",
+  "productName": ["Blackberry", "Nokia Edge", "iphone x", "Samsung Note 8"]
+}

@@ -33,7 +33,7 @@ it("Add and remove a product from the basket", () => {
     cy.get('.cart_list .removed_cart_item').should('have.lengthOf',1)  //confirm one item was deleted  
 })
 
-it("Test", () => {
+it("Test removing items from cart", () => {
     cy.visit('https://saucedemo.com/')
     cy.loginSauce('standard_user', 'secret_sauce')
     cy.get('#inventory_container .inventory_item').each(($el, index, $list) => {

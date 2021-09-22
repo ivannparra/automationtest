@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import HomePage from '../integration/Tests/pageObjects/HomePage'
 
 Cypress.Commands.add('loginSauce', (user, password) => {
     cy.get('#user-name').type(user)
@@ -22,5 +23,13 @@ Cypress.Commands.add('loginSauce', (user, password) => {
     cy.get('#login-button').click()
 })
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+Cypress.Commands.add('addProduct', (productName) => {
+    const homePage = new HomePage()
+    homePage.getItemCards().each(($el, index, $list) => {
+        let product = $el.text()
+        cy.log()
+        if(product.includes(productName)) {
+            homePage.getItemCardFooter().eq(index).click()            
+        }
+    })    
+})
